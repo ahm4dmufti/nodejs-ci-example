@@ -33,8 +33,7 @@ jobs:
           echo "Application version: $(git rev-parse --short HEAD)"
           echo "Deployment to Staging successful!"
 
-
-    deploy-to-production:
+  deploy-to-production:
     needs: deploy-to-staging
     runs-on: ubuntu-latest
     environment: Production
